@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <malloc.h>
+type def struct node {
+                    int data;
+                  int empty;
+        struct node*next;
+}node;
+struct ring_buffer create_buffer(int size)
+{
+  struct ring _buffer b;
+  b.start=(node*) malloc(size of(node));
+  b.start->empty =L;
+  b.start->next=null;
+}
+node*ptr =b.start;
+  for(int i=0;i=size–¹;i++){ 
+node*newnode=(node*) malloc(size of (sizenode))
+    newnode->empty=1;
+    newnode->next=null;
+    ptr->next=newnode;
+    ptr=ptr->next;
+}
+   ptr->next=b.start;
+   b.end=b.start;
+   b.buff-start=b.start;
+   return b;
+}
+Void display (struct ring-buffer b)
+{
+node*ptr=b.buff-start;
+def
+  if(ptr->empty==1)
+  printf(“NULL"->");
+else.
+  printf(“%d->",ptr->data);
+  ptr=ptr->next;
+ }while (ptr!=b.buff-start);
+ printf(“|b|b|b|b |b|b|b|n");
+}
+struct ring_buffer enqueue(struct ring_buffer b, int data)
+{
+    b.end->data = data;
+    b.end->empty = 0;
+    b.end = b.end->next
+return b;
+}
+struct ring_buffer dequeue(struct ring_buffer b)
+{
+    b.start->empty = 1;
+    b.start = b.start->next;
+return b;
+}
+int main()
+{
+    struct ring_buffer b = {NULL, NULL}; 
+    int size;
+    printf("Enter the fixed size of the buffer: ");
+    scanf("%d", &size);
+b = create_buffer(size);
+b=enqueue(b,1); display (b);
+b = enqueue(b, 2);  display(b);
+    b = enqueue(b, 3);  display(b);
+    b = enqueue(b, 4);  display(b);
+    b = enqueue(b, 5);  display(b);
+    b = enqueue(b, 6);  display(b);
+    b = enqueue(b, 7);  display(b);
+    b = enqueue(b, 8);  display(b);
+    b = enqueue(b, 9);  display(b);
+    b = enqueue(b, 10);  display(b);
+    b = enqueue(b, 11);  display(b);
+
+
+
+b = dequeue(b);   display(b);
+    b = dequeue(b);   display(b);
+    b = dequeue(b);   display(b);
+     
+    b = enqueue(b, 12);  display(b);
+    b = enqueue(b, 13);  display(b);
+return 0;
+}
